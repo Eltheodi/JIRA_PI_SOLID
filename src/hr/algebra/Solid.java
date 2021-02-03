@@ -6,6 +6,7 @@ public class Solid {
 	// write your code here
 
 
+        System.out.println("hey");
 
     }
 }
