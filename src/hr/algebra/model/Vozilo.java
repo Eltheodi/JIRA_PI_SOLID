@@ -26,8 +26,6 @@ public abstract class Vozilo implements  Chargable{
   this.kolicinaPlina = kolicinaPlina;
  }
 
- public Vozilo() {
- }
 
 
  @Override
@@ -39,5 +37,5 @@ public abstract class Vozilo implements  Chargable{
  }
 
  @Override
- public abstract Double calculateCharge() ;
+ public abstract double calculateCharge() ;
 }
