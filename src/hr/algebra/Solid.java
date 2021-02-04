@@ -9,6 +9,8 @@ public class Solid {
 
     private static double ukupnaZarada;
     public static void main(String[] args) {
+
+
         // write your code here
         ukupnaZarada=0;
         System.out.println("~~~~~~~~~~~~~~~~~Terminal XYZ~~~~~~~~~~~~~~~~~~~");
@@ -40,6 +42,8 @@ public class Solid {
 
     }
 
+
+
     private static void obradaVozila(List<Vozilo> voziloList, Zaposlenik z) {
         List<Vozilo> malaVozila = new ArrayList<>();
         List<Vozilo> velikaVozila = new ArrayList<>();
@@ -52,7 +56,8 @@ public class Solid {
             else {
                 velikaVozila.add(vozilo);
             }
-            Repo.SpremiPlacuZaposlenika(z, karta);
+            spremiPlacu(z, karta);
+
             totalPayment += karta;
         }
 
@@ -68,6 +73,9 @@ public class Solid {
 
 
     }
+
+    private  static void spremiPlacu(Zaposlenik z, double karta) {
+        RepositoryFactory.getRepository().SpremiPlacuZaposlenika(z, karta);    }
 
     private static void ispisVozila(List<Vozilo> voziloList) {
         voziloList.forEach(System.out::println);
